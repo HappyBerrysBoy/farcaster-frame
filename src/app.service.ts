@@ -36,12 +36,12 @@ const mainPageBody = `
 
 let pageFromTemplate = (
   imageUrl: string,
-  button1Text: string,
-  button2Text: string,
-  button3Text: string,
-  button4Text: string,
   apiUrl: string,
   body: string,
+  button1Text?: string,
+  button2Text?: string,
+  button3Text?: string,
+  button4Text?: string,
 ) => `
 <!DOCTYPE html>
 <html lang='en'>
@@ -60,7 +60,6 @@ let pageFromTemplate = (
     <meta property='fc:frame:button:2:action' content='post_redirect' />
     <meta property='fc:frame:button:3:action' content='link' />
     <meta property='fc:frame:button:3:target' content='https://uncommonlab.org' />
-    <meta property='fc:frame:input:text' content='Text!! Uncommonlab!!' />
     <meta property='fc:frame:post_url' content='${apiUrl}' />
     <meta property='og:title' content='Azle farcaster frame' />
     <meta property='og:image' content='${imageUrl}' />
@@ -79,24 +78,36 @@ export class AppService {
   getHello(): string {
     return pageFromTemplate(
       'https://stackstake.io/_next/image?url=%2Fimages%2Fapps-main.png&w=3840&q=75',
+      'http://3.34.219.240:3030/farcaster',
+      mainPageBody,
       'Harry',
       'Sean',
       'dOne',
       'Dubu',
-      'http://3.34.219.240:3030/farcaster',
-      mainPageBody,
     );
   }
 
   getHello2(): string {
     return pageFromTemplate(
       'https://uncommonlab.org/_next/image?url=%2Fimages%2Fmission.png&w=1920&q=75',
-      'harry',
-      'Sad',
-      'Angry',
-      'Surprised',
       'http://3.34.219.240:3030/farcaster',
       mainPageBody,
+      'Harry',
+      'Sean',
+      'dOne',
+      'Dubu',
+    );
+  }
+
+  getHello3(): string {
+    return pageFromTemplate(
+      'https://pbs.twimg.com/profile_images/1658701943303454723/BCou3b7B_400x400.jpg',
+      'http://3.34.219.240:3030/farcaster',
+      mainPageBody,
+      'So Cute!!',
+      'So Pretty!!',
+      'So White!!',
+      'So Doggy!!',
     );
   }
 }
