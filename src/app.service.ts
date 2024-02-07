@@ -78,7 +78,7 @@ export class AppService {
       'Button 2',
       'Button 3',
       'Button 4',
-      'https://pd7ra-qiaaa-aaaan-qltsq-cai.raw.icp0.io/api',
+      'http://15.165.254.234:3030',
       mainPageBody,
     );
   }
