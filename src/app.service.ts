@@ -78,8 +78,22 @@ export class AppService {
       'Button 2',
       'Button 3',
       'Button 4',
-      'http://3.34.219.240:3030',
+      'http://3.34.219.240:3030/farcaster',
+      mainPageBody,
+    );
+  }
+
+  test(): string {
+    return pageFromTemplate(
+      'https://stackstake.io/_next/image?url=%2Fimages%2Fapps-main.png&w=3840&q=75',
+      'Button 1',
+      'Button 2',
+      'Button 3',
+      'Button 4',
+      'http://3.34.219.240:3030/farcaster',
       mainPageBody,
     );
   }
 }
+
+// https://uncommonlab.org/_next/image?url=%2Fimages%2Fmission.png&w=1920&q=75
