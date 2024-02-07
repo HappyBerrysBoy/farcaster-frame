@@ -19,7 +19,24 @@ export class AppController {
     console.log(res);
     // console.log(req.body);
 
+    return this.appService.getHello3();
+  }
+
+  @Get('/t2')
+  t2(): string {
     return this.appService.getHello2();
+  }
+
+  @Post('/t2')
+  t2post(req: Request, res: Response): string {
+    console.log(`return gethello2`);
+    console.log(`Request`);
+    console.log(req);
+    console.log(`Response`);
+    console.log(res);
+    // console.log(req.body);
+
+    return this.appService.getHello3();
   }
 
   @Post('/farcaster')
