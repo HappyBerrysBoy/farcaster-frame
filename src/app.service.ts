@@ -73,7 +73,7 @@ let pageFromTemplate = (
 export class AppService {
   getHello(): string {
     return pageFromTemplate(
-      'https://raw.githubusercontent.com/demergent-labs/azle/main/logo/logo.svg',
+      'https://stackstake.io/_next/image?url=%2Fimages%2Fapps-main.png&w=3840&q=75',
       'Button 1',
       'Button 2',
       'Button 3',
