@@ -78,7 +78,7 @@ export class AppService {
       'Button 2',
       'Button 3',
       'Button 4',
-      'http://15.165.254.234:3030',
+      'http://3.34.219.240:3030',
       mainPageBody,
     );
   }
