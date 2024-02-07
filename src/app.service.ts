@@ -56,6 +56,11 @@ let pageFromTemplate = (
     <meta property='fc:frame:button:2' content='${button2Text}' />
     <meta property='fc:frame:button:3' content='${button3Text}' />
     <meta property='fc:frame:button:4' content='${button4Text}' />
+    <meta property='fc:frame:button:1:action' content='post' />
+    <meta property='fc:frame:button:2:action' content='post_redirect' />
+    <meta property='fc:frame:button:3:action' content='link' />
+    <meta property='fc:frame:button:3:target' content='https://uncommonlab.org' />
+    <meta property='fc:frame:input:text' content='Text!! Uncommonlab!!' />
     <meta property='fc:frame:post_url' content='${apiUrl}' />
     <meta property='og:title' content='Azle farcaster frame' />
     <meta property='og:image' content='${imageUrl}' />
@@ -74,10 +79,10 @@ export class AppService {
   getHello(): string {
     return pageFromTemplate(
       'https://stackstake.io/_next/image?url=%2Fimages%2Fapps-main.png&w=3840&q=75',
-      'Button 1',
-      'Button 2',
-      'Button 3',
-      'Button 4',
+      'Harry',
+      'Sean',
+      'dOne',
+      'Dubu',
       'http://3.34.219.240:3030/farcaster',
       mainPageBody,
     );
@@ -86,7 +91,7 @@ export class AppService {
   getHello2(): string {
     return pageFromTemplate(
       'https://uncommonlab.org/_next/image?url=%2Fimages%2Fmission.png&w=1920&q=75',
-      'Happy',
+      'harry',
       'Sad',
       'Angry',
       'Surprised',
