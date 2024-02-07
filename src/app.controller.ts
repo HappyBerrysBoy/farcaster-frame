@@ -13,6 +13,7 @@ export class AppController {
   @Post()
   getHello2(req: Request): string {
     console.log(`return gethello2`);
+    console.log(req);
     console.log(req.body);
 
     return this.appService.getHello();
