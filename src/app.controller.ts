@@ -11,12 +11,15 @@ export class AppController {
   }
 
   @Post()
-  getHello2(req: Request): string {
+  getHello2(req: Request, res: Response): string {
     console.log(`return gethello2`);
+    console.log(`Request`);
     console.log(req);
-    console.log(req.body);
+    console.log(`Response`);
+    console.log(res);
+    // console.log(req.body);
 
-    return this.appService.getHello();
+    return this.appService.getHello2();
   }
 
   @Post('/farcaster')
@@ -24,6 +27,6 @@ export class AppController {
     console.log(`return farcaster`);
     console.log(req.body);
 
-    return this.appService.test();
+    return this.appService.getHello2();
   }
 }
